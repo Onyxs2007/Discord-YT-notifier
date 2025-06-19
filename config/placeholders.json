@@ -1,0 +1,10 @@
+{
+  "video_id": "id.videoId",
+  "video_title": "snippet.title",
+  "video_url": "https://youtu.be/{{video_id}}",
+  "video_thumbnail": "snippet.thumbnails.medium.url",
+  "channel_title": "snippet.channelTitle",
+  "publish_time": "snippet.publishedAt",
+  "video_duration": "__FETCH_DURATION__",
+  "video_type": "__DETECT_TYPE__"
+}
