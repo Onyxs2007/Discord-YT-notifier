@@ -1,0 +1,23 @@
+{
+  "name": "yt-discord-notifier",
+  "version": "1.0.0",
+  "description": "Super advanced YouTube to Discord webhook notifier with modular plugins and customizable embed logic.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "youtube",
+    "discord",
+    "notifier",
+    "webhook",
+    "plugins",
+    "modular"
+  ],
+  "author": "Nexo",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "chalk": "^5.3.0"
+  }
+}
