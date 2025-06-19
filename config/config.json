@@ -1,0 +1,23 @@
+{
+  "youtubeApiKey": "YOUR_API_KEY",
+  "channelId": "YOUR_CHANNEL_ID",
+  "webhookUrl": "YOUR_DISCORD_WEBHOOK_URL",
+  "checkIntervalSeconds": 60,
+  "useEmbed": true,
+  "pingRoleId": "",
+
+  "postOnlyAfterProcessing": true,
+  "retryDelaySeconds": 30,
+
+  "embedTemplate": {
+    "title": "{{video_title}}",
+    "description": "{{custom_message}}\n[Watch here]({{video_url}})",
+    "color": 16711680,
+    "footer": "{{channel_title}} • Duration: {{video_duration}}",
+    "thumbnail": "{{video_thumbnail}}",
+    "timestamp": "{{publish_time}}"
+  },
+
+  "customMessage": "📢 New upload by {{channel_title}}!",
+  "timeZone": "America/New_York"
+}
