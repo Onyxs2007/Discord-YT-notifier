@@ -7,12 +7,9 @@ async function buildEmbed(video) {
   const videoId = video.id.videoId;
   const details = await fetchVideoDetails(videoId);
 
-  if (config.postOnlyAfterProcessing) {
-    const status = details?.processingDetails?.processingStatus;
-    if (status !== "succeeded") {
-      log("Video still processing. Skipping.");
-      return null;
-    }
+  if (!details || !details.contentDetails) {
+    log("No video content details found, skipping...");
+    return null;
   }
 
   const duration = parseDuration(details.contentDetails.duration);

@@ -27,13 +27,13 @@ async function fetchVideoDetails(videoId) {
     const res = await axios.get("https://www.googleapis.com/youtube/v3/videos", {
       params: {
         key: config.youtubeApiKey,
-        part: "contentDetails,processingDetails",
+        part: "contentDetails", // ✅ No 'processingDetails'
         id: videoId
       }
     });
     return res.data.items[0];
   } catch (err) {
-    error("Failed to fetch video details:", err.message);
+    error("Failed to fetch video details:", err.response?.data?.error?.message || err.message);
     return null;
   }
 }
